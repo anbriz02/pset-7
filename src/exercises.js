@@ -3,8 +3,17 @@ function commonEnd(a, b) {
     return false;
   }
 
-  // write your code here
+const thingy1 = a.substring(0, a.length-1);
+const thingy2 = b.substring(0, b.length-1);
+
+if (thingy1 === thingy2){
+return true;
+}else{
+  return false;
 }
+}
+
+
 
 function endsMeet(values, n) {
   // write your code here
