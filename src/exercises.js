@@ -57,3 +57,37 @@ function difference(numbers) {
   }
   // write your code here
 }
+
+function max(number) {
+  let numeral = true;
+  if (!number || number.length < 3) {
+    return undefined;
+  }
+  let check = number.length % 2;
+  if (check === 0) {
+    return undefined;
+  }
+  if (number.length >= 3) {
+    for (i = 0; i <= number.length - 1; i++) {
+      let unknown = number[i];
+      if (isNaN(unknown)) {
+        numeral = false;
+      }
+    }
+  }
+  if (numeral === false) {
+    return undefined;
+  } else {
+    let end = number.length - 1;
+    let first = number[0];
+    let last = number[end];
+    let middle = number[end / 2];
+    let newArray = [];
+    newArray.push(first);
+    newArray.push(middle);
+    newArray.push(last);
+    let largest = Math.max.apply(null, newArray);
+    return largest;
+    }
+  // write your code here
+}
