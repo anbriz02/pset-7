@@ -37,3 +37,23 @@ function endsMeet(values, n) {
 
   // write your code here
 }
+
+function difference(numbers) {
+  if (!numbers || numbers.length < 1) {
+    return undefined;
+  } else if (numbers.length >= 1) {
+    for (i = 0; i <= numbers.length - 1; i++) {
+      let number = numbers[i];
+      if (isNaN(number)) {
+        return undefined;
+      }
+    }
+    let largest = Math.max.apply(null, numbers);
+    let smallest = Math.min.apply(null, numbers);
+    let difference = largest - smallest;
+    return difference;
+  } else {
+    return undefined;
+  }
+  // write your code here
+}
