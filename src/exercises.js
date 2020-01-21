@@ -113,3 +113,31 @@ function middle(values) {
   return newArray;
   // write your code here
 }
+
+function increasing(numbers) {
+  if (!numbers || numbers.length < 3) {
+    return false;
+  }
+  let numeral = true;
+  for (i = 0; i <= numbers.length - 1; i++) {
+    let unknown = numbers[i];
+    if (isNaN(unknown)) {
+      numeral = false;
+    }
+  }
+  if (numeral === false) {
+    return false;
+  }
+  let status = false;
+  for (x = 0; x < numbers.length - 1; x++) {
+    if (numbers[x] < numbers[x + 1] && numbers[x + 1] < numbers[x + 2]) {
+      status = true;
+    }
+  }
+  if (status === true) {
+    return true;
+  } else {
+    return false;
+  }
+  // write your code here
+}
