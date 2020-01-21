@@ -12,3 +12,28 @@ function commonEnd(a, b) {
   }
   // write your code here
 }
+
+function endsMeet(values, n) {
+  let empty = [];
+  if (!values || values.length < n || n <= 0) {
+    return empty;
+  } else if (n > 0) {
+    let newArray = [];
+    let first;
+    for (f = 0; f <= n - 1; f++) {
+      first = values[f];
+      newArray.push(first);
+    }
+    let end = values.length - 1;
+    let endStart = values.length - n;
+    for (e = endStart; e <= end; e++) {
+      let addEnd = values[e];
+      newArray.push(addEnd);
+    }
+    return newArray;
+  } else {
+    return values;
+  }
+
+  // write your code here
+}
