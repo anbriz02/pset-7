@@ -141,3 +141,41 @@ function increasing(numbers) {
   }
   // write your code here
 }
+
+function everywhere(values, x) {
+  if (!values || values.length < 1 || !x) {
+    return false;
+  }
+  let status = false;
+  let test = 0;
+  for (i = 0; i < values.length - 1; i = i + 2) {
+    if (values[i] === x) {
+      test++;
+    }
+  }
+  if (test >= (values.length - 1) / 2) {
+    return true;
+  }
+  let test2 = 0;
+  for (h = 1; h < values.length - 1; h = h + 2) {
+    if (values[h] === x) {
+      test2++;
+    }
+  }
+  if (test2 >= (values.length - 1) / 2) {
+    return true;
+  }
+  let test3 = 0;
+  for (j = 1; j < values.length - 1; j = j + 3) {
+    if (values[j] === x) {
+      test3++;
+    }
+  }
+  if (test3 >= values.length / 3) {
+    return true;
+  } else {
+    return false;
+  }
+
+  // write your code here
+}
