@@ -248,3 +248,38 @@ function balance(numbers) {
   // write your code here
   console.log("test");
 }
+
+function clumps(values) {
+  let count = 0;
+  if (!values) {
+    return -1;
+  }
+  else {
+    for (let i = 0; i < values.length - 1; i++) {
+    if (values[i - 1] === values[i]) {
+    }
+    else if (values[i] === values[i + 1]) {
+      count++;
+    }
+  }
+  return count;
+  }
+  // write your code here
+}
+
+/*
+ * Exports all functions for use in external grader.js file. Do not modify.
+ */
+
+module.exports = {
+  commonEnd,
+  endsMeet,
+  difference,
+  max,
+  middle,
+  increasing,
+  everywhere,
+  consecutive,
+  balance,
+  clumps
+};
